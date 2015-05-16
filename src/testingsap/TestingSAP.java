@@ -72,7 +72,7 @@ public class TestingSAP  {
 
         try {
             Class.forName (driver_class).newInstance();
-            connectionURL = "jdbc:oracle:thin:@192.19.172.101:1521:master";
+            connectionURL = "jdbc:oracle:thin:@//oraserveri:1521/proyectopdb";
             conn = DriverManager.getConnection(connectionURL, dbUser, dbPassword);
             conn.setAutoCommit(false);
             System.out.println("Modo de aislamiento: " + conn.getMetaData().getDefaultTransactionIsolation());
